@@ -28,6 +28,7 @@
   border-bottom: 60px solid transparent;
   border-left: 90px solid #ED1C24;
   transform: rotate(90deg);
+  animation: rotate360 9s ease-in-out; /* using 9s to space out the timing the elements rotate */
 }
 .arrow-lvl2-2 {
   position: absolute;
@@ -52,6 +53,7 @@
   border-bottom: 60px solid transparent;
   border-left: 90px solid #ED1C24;
   transform: rotate(90deg);
+  animation: rotate360 9s ease-in-out;
 }
 .arrow-lvl2-4 {
   position: absolute;
@@ -76,6 +78,7 @@
   border-bottom: 60px solid transparent;
   border-left: 90px solid #ED1C24;
   transform: rotate(90deg);
+  animation: rotate360 9s ease-in-out;
 }
 
 .arrow-lvl3-1 {
@@ -101,6 +104,7 @@
   border-bottom: 60px solid transparent;
   border-left: 90px solid #ED1C24;
   transform: rotate(90deg);
+  animation: rotate360 7s ease-in-out;
 }
 .arrow-lvl3-3 {
   position: absolute;
@@ -125,6 +129,7 @@
   border-bottom: 60px solid transparent;
   border-left: 90px solid #ED1C24;
   transform: rotate(90deg);
+  animation: rotate360 7s ease-in-out;
 }
 .arrow-lvl3-5 {
   position: absolute;
@@ -138,7 +143,6 @@
   border-left: 90px solid #364EA2;
   transform: rotate(-90deg);
 }
-
 .arrow-bottom {
   position: absolute;
   top: 310px;
@@ -150,4 +154,47 @@
   border-bottom: 60px solid transparent;
   border-left: 90px solid #ED1C24;
   transform: rotate(90deg);
+  animation: rotate360 5s ease-in-out;
+}
+
+/*Animations */
+.rotater-360-infinite{
+  animation: rotater-360 5s linear infinite;
+  animation-delay: 1.5s;
+}
+/* Keyframes */
+@keyframes rotater-360 {
+  from{
+    transform: rotate(-90deg);
+  }
+  to{
+    transform: rotate(-450deg);
+  }
+}
+
+@keyframes rotate360 {
+  20%{
+    transform: rotate(180deg);
+  }
+   30%{
+     transform: rotate(360deg);
+   }
+   40%{
+     transform: rotate(540deg);
+   }
+   50%{
+     transform: rotate(720deg);
+   }
+   60%{
+     transform: rotate(900deg);
+   }
+   70%{
+     transform: rotate(1080deg);
+   }
+   80%{
+     transform: rotate(1260deg);
+   }
+   90%{
+     transform: rotate(1400deg);
+   }
 }
