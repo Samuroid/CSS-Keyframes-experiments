@@ -1,6 +1,6 @@
 .container{
   position: relative;
-  width: 500px;
+  width: 440px;
   height: 500px;
   margin: 0 auto;
 }
@@ -151,6 +151,53 @@
   transform: rotate(90deg);
 }
 
+.flowerContainer{
+  position: relative;
+  margin: 0 auto;
+  width: 250px;
+  height: 250px;
+  outline: 1px solid blue;
+}
+.flowerContainer ul{
+  margin: 0;
+  position: absolute;
+  /* left: 45%; */
+}
+.flowerContainer ul li{
+  list-style: none;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  border-radius: 50%; /* make a circle */
+  transform-origin: bottom center;
+  animation: animate 6s linear infinite;
+}
+.flowerContainer ul li:nth-child(1){
+  background: rgba(214,188,211,.5);
+  animation-delay: 0s;
+}
+.flowerContainer ul li:nth-child(2){
+  background: rgba(214,188,211,.5);
+  animation-delay: 1s;
+}
+.flowerContainer ul li:nth-child(3){
+  background: rgba(214,188,211,.5);
+  animation-delay: 2s;
+}
+.flowerContainer ul li:nth-child(4){
+  background: rgba(214,188,211,.5);
+  animation-delay: 3s;
+}
+.flowerContainer ul li:nth-child(5){
+  background: rgba(214,188,211,.5);
+  animation-delay: 4s;
+}
+.flowerContainer ul li:nth-child(6){
+  background: rgba(214,188,211,.5);
+  animation-delay: 5s;
+}
+
 /*Animations */
 .rotater-360-infinite{
   animation: rotater-360 7s ease-in-out;
@@ -193,4 +240,14 @@
    90%{
      transform: rotate(1400deg);
    }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0)
+  }
+
+  100% {
+    transform: rotate(359deg)
+  }
 }
