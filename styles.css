@@ -28,7 +28,6 @@
   border-bottom: 60px solid transparent;
   border-left: 90px solid #ED1C24;
   transform: rotate(90deg);
-  animation: rotate360 9s ease-in-out; /* using 9s to space out the timing the elements rotate */
 }
 .arrow-lvl2-2 {
   position: absolute;
@@ -53,7 +52,6 @@
   border-bottom: 60px solid transparent;
   border-left: 90px solid #ED1C24;
   transform: rotate(90deg);
-  animation: rotate360 9s ease-in-out;
 }
 .arrow-lvl2-4 {
   position: absolute;
@@ -78,7 +76,6 @@
   border-bottom: 60px solid transparent;
   border-left: 90px solid #ED1C24;
   transform: rotate(90deg);
-  animation: rotate360 9s ease-in-out;
 }
 
 .arrow-lvl3-1 {
@@ -104,7 +101,6 @@
   border-bottom: 60px solid transparent;
   border-left: 90px solid #ED1C24;
   transform: rotate(90deg);
-  animation: rotate360 7s ease-in-out;
 }
 .arrow-lvl3-3 {
   position: absolute;
@@ -129,7 +125,6 @@
   border-bottom: 60px solid transparent;
   border-left: 90px solid #ED1C24;
   transform: rotate(90deg);
-  animation: rotate360 7s ease-in-out;
 }
 .arrow-lvl3-5 {
   position: absolute;
@@ -154,13 +149,14 @@
   border-bottom: 60px solid transparent;
   border-left: 90px solid #ED1C24;
   transform: rotate(90deg);
-  animation: rotate360 5s ease-in-out;
 }
 
 /*Animations */
 .rotater-360-infinite{
-  animation: rotater-360 5s linear infinite;
-  animation-delay: 1.5s;
+  animation: rotater-360 7s ease-in-out;
+}
+.rotater360-infinite{
+    animation: rotater360 5s ease-in-out;
 }
 /* Keyframes */
 @keyframes rotater-360 {
@@ -172,7 +168,7 @@
   }
 }
 
-@keyframes rotate360 {
+@keyframes rotater360 {
   20%{
     transform: rotate(180deg);
   }
