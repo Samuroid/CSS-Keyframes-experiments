@@ -78,25 +78,32 @@ function updateBtnView(btn){
 }
 
 function addSeedAnimation(item, index){
-  console.log(item);
   item.classList.add('animateSeed');
   spinSeedBtn.classList.add('active');
+  const seedElements = document.querySelectorAll('.seedContainer ul li');
+
+  document.querySelectorAll('.seedContainer ul li').forEach(function(item, index){ item.style.transition = 'top, left 2s ease-in'; item.style.top = '130px'; item.style.left = '40px'; });
 }
 
 function pauseSeedAnimation(item, index){
   item.style.animationPlayState = 'pause';
   item.classList.remove('animateSeed');
+  spinSeedBtn.classList.remove('active');
 }
 
 /* Listen for button click */
 spinSeedBtn.addEventListener('click',  function (e){
   const seedElements = document.querySelectorAll('.seedContainer ul li');
-  document.querySelector('.seedContainer').style.opacity = '1';
+  // document.querySelector('.seedContainer').style.opacity = '1';
+  //
+  // todo - below code not working. always false
   if(spinSeedBtn.classList.contains !== 'active'){//if not active
+    console.log('button was not active');
     seedElements.forEach(addSeedAnimation); //begin animation
   }
   else if(spinSeedBtn.classList.contains === 'active'){//if active
     seedElements.forEach(pauseSeedAnimation); //pause animation
+    console.log('button was active');
   }
 
 });

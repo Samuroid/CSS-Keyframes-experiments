@@ -216,7 +216,6 @@
   background: rgba(68,0,103,.3);
   animation-delay: 5s;
 }
-
 /*Animations */
 .animateSeed{
   animation: animate 6s linear infinite;
@@ -266,10 +265,10 @@
 
 @keyframes animate {
   0% {
-    transform: rotate(0)
+    transform: rotate(0);
   }
 
   100% {
-    transform: rotate(359deg)
+    transform: rotate(359deg);
   }
 }
