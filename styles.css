@@ -2,7 +2,7 @@
   position: relative;
   width: 440px;
   height: 500px;
-  margin: 0 auto;
+  margin: 90px auto 0;
 }
 
 .arrow-top {
@@ -151,54 +151,76 @@
   transform: rotate(90deg);
 }
 
-.flowerContainer{
+.seedContainer{
   position: relative;
+  top: -530px;
+  left: 30px;
   margin: 0 auto;
-  width: 250px;
-  height: 250px;
-  outline: 1px solid blue;
+  width: 260px;
+  height: 260px;
+  opacity: 1;
 }
-.flowerContainer ul{
-  margin: 0;
-  position: absolute;
-  /* left: 45%; */
+.seedContainer ul{
+  margin: 0 auto;
+  position: relative;
 }
-.flowerContainer ul li{
+.seedContainer ul li{
   list-style: none;
-  width: 80px;
-  height: 80px;
-  position: absolute;
+  width: 120px;
+  height: 120px;
+  position: relative;
   top: 0;
   border-radius: 50%; /* make a circle */
+  border: 1px solid #000;
   transform-origin: bottom center;
-  animation: animate 6s linear infinite;
 }
-.flowerContainer ul li:nth-child(1){
-  background: rgba(214,188,211,.5);
+.seedContainer ul li:nth-child(1){
+  position: absolute;
+  top: 0;
+  left: 40px;
+  background: rgba(68,0,103,.3);
   animation-delay: 0s;
 }
-.flowerContainer ul li:nth-child(2){
-  background: rgba(214,188,211,.5);
+.seedContainer ul li:nth-child(2){
+  position: absolute;
+  top: 95px;
+  left: -170px;
+  background: rgba(68,0,103,.3);
   animation-delay: 1s;
 }
-.flowerContainer ul li:nth-child(3){
-  background: rgba(214,188,211,.5);
+.seedContainer ul li:nth-child(3){
+  position: absolute;
+  top: 95px;
+  left: 250px;
+  background: rgba(68,0,103,.3);
   animation-delay: 2s;
 }
-.flowerContainer ul li:nth-child(4){
-  background: rgba(214,188,211,.5);
+.seedContainer ul li:nth-child(4){
+  position: absolute;
+  top: 280px;
+  left: -170px;
+  background: rgba(68,0,103,.3);
   animation-delay: 3s;
 }
-.flowerContainer ul li:nth-child(5){
-  background: rgba(214,188,211,.5);
+.seedContainer ul li:nth-child(5){
+  position: absolute;
+  top: 280px;
+  left: 250px;
+  background: rgba(68,0,103,.3);
   animation-delay: 4s;
 }
-.flowerContainer ul li:nth-child(6){
-  background: rgba(214,188,211,.5);
+.seedContainer ul li:nth-child(6){
+  position: absolute;
+  top: 380px;
+  left: 40px;
+  background: rgba(68,0,103,.3);
   animation-delay: 5s;
 }
 
 /*Animations */
+.animateSeed{
+  animation: animate 6s linear infinite;
+}
 .rotater-360-infinite{
   animation: rotater-360 7s ease-in-out;
 }

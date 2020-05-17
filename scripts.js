@@ -1,5 +1,6 @@
-const blueBtn = document.querySelector('.btn-primary');
+const blueBtn = document.querySelector('.btn-spin-blue');
 const redBtn = document.querySelector('.btn-danger');
+const spinSeedBtn = document.querySelector('.btn-spin-seed');
 
 blueBtn.addEventListener('click', function (e){
   const blueElements = document.getElementsByClassName('blue');
@@ -58,10 +59,44 @@ redBtn.addEventListener('click', function (e){
 Responsible for updating the view text of a button
  */
 function updateBtnView(btn){
-  if(btn.innerHTML === 'Spin'){
-    btn.innerHTML = 'Stop';
+  // check which button we are
+  if(btn.classList.contains === 'btn-spin-blue' || btn.classList.contains === 'btn-spin-red'){
+    if(btn.innerHTML === 'Spin'){
+      btn.innerHTML = 'Stop';
+    }
+    else if(btn.innerHTML === 'Stop'){
+      btn.innerHTML = 'Spin';
+    }
   }
-  else if(btn.innerHTML === 'Stop'){
-    btn.innerHTML = 'Spin';
+
+  if(btn.classList.contains === 'btn-spin-seed'){//if we are the seed spin btn
+    const seedElements = document.querySelectorAll('.flowerContainer ul li');
+    seedElements.forEach(function(item, index){
+      item.style.animationPlayState = 'pause';
+    });
   }
 }
+
+function addSeedAnimation(item, index){
+  console.log(item);
+  item.classList.add('animateSeed');
+  spinSeedBtn.classList.add('active');
+}
+
+function pauseSeedAnimation(item, index){
+  item.style.animationPlayState = 'pause';
+  item.classList.remove('animateSeed');
+}
+
+/* Listen for button click */
+spinSeedBtn.addEventListener('click',  function (e){
+  const seedElements = document.querySelectorAll('.seedContainer ul li');
+  document.querySelector('.seedContainer').style.opacity = '1';
+  if(spinSeedBtn.classList.contains !== 'active'){//if not active
+    seedElements.forEach(addSeedAnimation); //begin animation
+  }
+  else if(spinSeedBtn.classList.contains === 'active'){//if active
+    seedElements.forEach(pauseSeedAnimation); //pause animation
+  }
+
+});
